@@ -7,8 +7,7 @@ export async function POST(request: Request) {
 
     // 2. Define the target n8n webhook URL
     const n8nWebhookUrl =
-      "http://n8n-b0kw4gogkkc4o0sswwcosk4c.34.123.144.211.sslip.io/webhook/5c1f417a-8b9d-4035-87e7-fd6818feca03";
-
+      "https://n8n-e7gukscs9qcimxyguroq4x4a.136.112.97.249.sslip.io/webhook/5c1f417a-8b9d-4035-87e7-fd6818feca03";
     // 3. Forward the payload directly to n8n via a server-side fetch.
     // This bypasses the browser's strict SSL/CORS constraints.
     const response = await fetch(n8nWebhookUrl, {
