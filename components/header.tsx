@@ -26,11 +26,11 @@ export function Header() {
     >
       <div className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Image
-          src="/Ladner_Systems.png"
+          src="/Ladner_Systems_trimmed.png"
           alt="Ladner Web Systems Logo"
-          width={187}
-          height={48}
-          className="h-13 w-auto"
+          width={660}
+          height={189}
+          className="h-14 w-auto"
           priority
         />
         <Button

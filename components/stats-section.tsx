@@ -64,7 +64,7 @@ function Stat({ stat }: { stat: (typeof stats)[number] }) {
         {stat.prefix}
         {value}
       </div>
-      <p className="mt-2 text-[15px] text-muted-foreground">{stat.label}</p>
+      <p className="mt-3 text-[15px] text-muted-foreground">{stat.label}</p>
     </div>
   )
 }

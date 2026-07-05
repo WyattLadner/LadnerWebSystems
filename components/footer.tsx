@@ -8,11 +8,11 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 sm:grid-cols-3">
         <div className="flex flex-col items-center gap-2 sm:items-start">
           <Image
-            src="/Ladner_Systems.png"
+            src="/Ladner_Systems_trimmed.png"
             alt="Ladner Web Systems Logo"
-            width={156}
-            height={40}
-            className="h-11 w-auto"
+            width={660}
+            height={189}
+            className="h-12 w-auto"
           />
           <p className="text-[13px] text-muted-foreground">
             Web systems for local businesses

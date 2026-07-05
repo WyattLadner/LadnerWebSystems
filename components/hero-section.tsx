@@ -151,7 +151,7 @@ export function HeroSection() {
       "(prefers-reduced-motion: reduce)",
     ).matches
     const spacing = 40
-    const maxDist = 120
+    const maxDist = 150
     const mouse = { x: -1000, y: -1000 }
     let raf = 0
 
@@ -200,16 +200,16 @@ export function HeroSection() {
           let y = baseY
           if (dist < maxDist && dist > 0) {
             const force = (maxDist - dist) / maxDist
-            x = baseX - (dx / dist) * force * 12
-            y = baseY - (dy / dist) * force * 12
+            x = baseX - (dx / dist) * force * 28
+            y = baseY - (dy / dist) * force * 28
           }
 
-          const pulse = 0.08 + 0.06 * Math.sin(time * 0.0008 + i * 0.3 + j * 0.3)
-          const proximity = dist < maxDist ? ((maxDist - dist) / maxDist) * 0.2 : 0
+          const pulse = 0.18 + 0.17 * Math.sin(time * 0.0008 + i * 0.3 + j * 0.3)
+          const proximity = dist < maxDist ? ((maxDist - dist) / maxDist) * 0.4 : 0
           const opacity = pulse + proximity
 
           ctx!.beginPath()
-          ctx!.arc(x, y, 1.2, 0, Math.PI * 2)
+          ctx!.arc(x, y, 1.8, 0, Math.PI * 2)
           ctx!.fillStyle = `rgba(0, 180, 216, ${opacity})`
           ctx!.fill()
         }
@@ -278,16 +278,16 @@ export function HeroSection() {
           We build websites and lead-capture systems for local businesses that are tired of losing customers to competitors with a better online presence.
         </p>
 
-        <p
-          className={`mx-auto my-4 block w-full text-center text-[clamp(1.1rem,2.2vw,1.6rem)] text-muted-foreground ${fadeClass(tickerVisible, reducedMotion)}`}
+        <div
+          className={`mx-auto my-4 grid w-full grid-cols-2 items-baseline text-[clamp(1.1rem,2.2vw,1.6rem)] text-muted-foreground ${fadeClass(tickerVisible, reducedMotion)}`}
         >
-          For{" "}
+          <span className="pr-[0.3em] text-right">For</span>
           <span
-            className={`inline-block min-w-50 text-left font-bold text-teal no-underline transition-opacity duration-400 ${tickerWordVisible ? "opacity-100" : "opacity-0"}`}
+            className={`text-left font-bold text-teal no-underline transition-opacity duration-400 ${tickerWordVisible ? "opacity-100" : "opacity-0"}`}
           >
             {BUSINESS_TYPES[wordIndex]}
           </span>
-        </p>
+        </div>
 
         <div
           className={`mt-8 flex flex-col justify-center gap-3 sm:flex-row ${fadeClass(ctaVisible, reducedMotion)}`}
