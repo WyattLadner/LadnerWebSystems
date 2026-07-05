@@ -9,12 +9,12 @@ import {
 } from "lucide-react"
 
 const trustPoints = [
-  { title: "Clearer calls to action", icon: MousePointerClick },
-  { title: "Easier customer contact", icon: PhoneCall },
-  { title: "Better lead capture", icon: Inbox },
-  { title: "Faster follow-up", icon: Timer },
-  { title: "More organized intake", icon: CheckSquare },
-  { title: "Stronger online presence", icon: TrendingUp },
+  { title: "Calls to action that actually work", icon: MousePointerClick },
+  { title: "Contact that takes seconds, not steps", icon: PhoneCall },
+  { title: "Every visitor is a potential lead", icon: Inbox },
+  { title: "Follow-ups that run while you sleep", icon: Timer },
+  { title: "Every request, organized automatically", icon: CheckSquare },
+  { title: "Show up where your customers are searching", icon: TrendingUp },
 ]
 
 export function TrustSection() {
@@ -28,7 +28,7 @@ export function TrustSection() {
       </div>
       <div className="relative mx-auto max-w-6xl">
         <h2 className="text-center text-2xl font-bold text-foreground sm:text-3xl">
-          Designed to Turn Visitors Into Requests
+          Built to convert visitors into customers
         </h2>
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {trustPoints.map((point) => (

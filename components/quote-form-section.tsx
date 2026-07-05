@@ -93,14 +93,17 @@ export function QuoteFormSection() {
   return (
     <section
       id="contact"
-      className="bg-background px-4 py-16 sm:px-6 sm:py-24 lg:px-8"
+      className="scroll-mt-24 bg-background px-4 py-16 sm:px-6 sm:py-24 lg:px-8"
     >
       <div className="mx-auto mb-12 max-w-3xl text-center">
         <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
-          Need a Better Website or Lead System for Your Business?
+          Ready to get more customers from your website?
         </h2>
         <p className="mt-4 text-lg text-muted-foreground">
-          Fill out the form below to get in touch.
+          Fill out the form and we&apos;ll be in touch within 24 hours.
+        </p>
+        <p className="mt-3 text-sm italic text-muted-foreground">
+          Most local business projects run between $1,500 and $4,000. Every project is scoped to what you actually need — no retainers, no surprise invoices.
         </p>
       </div>
 

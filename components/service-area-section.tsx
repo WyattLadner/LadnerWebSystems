@@ -19,7 +19,7 @@ export function ServiceAreaSection() {
           Built for Local Businesses
         </h2>
         <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-          This is for businesses that need a stronger website and a better way to capture and organize customer requests.
+          If you're running a home service business, a salon, a gym, a restaurant, or any local operation — and you're losing customers because your online presence isn't keeping up — this is built for you.
         </p>
         <div className="mt-8 flex justify-center">
           <ul className="text-left space-y-3">

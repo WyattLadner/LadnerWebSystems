@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
@@ -10,16 +9,20 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)
+      setIsScrolled(window.scrollY > 80)
     }
+    handleScroll()
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full bg-background transition-shadow duration-200 ${isScrolled ? "shadow-md" : ""
-        }`}
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ease-in-out ${
+        isScrolled
+          ? "border-b border-border/60 bg-background shadow-md"
+          : "border-b border-transparent bg-transparent shadow-none"
+      }`}
     >
       <div className="mx-auto flex h-16 w-full items-center justify-between px-0 sm:px-2 lg:px-4">
         <div className="flex items-center gap-2">
