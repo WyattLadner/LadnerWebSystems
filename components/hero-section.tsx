@@ -279,11 +279,11 @@ export function HeroSection() {
         </p>
 
         <div
-          className={`mx-auto my-4 grid w-full grid-cols-2 items-baseline text-[clamp(1.1rem,2.2vw,1.6rem)] text-muted-foreground ${fadeClass(tickerVisible, reducedMotion)}`}
+          className={`mx-auto my-4 flex w-full items-baseline justify-center gap-2 text-center text-[clamp(1.1rem,2.2vw,1.6rem)] text-muted-foreground md:grid md:grid-cols-2 md:gap-0 ${fadeClass(tickerVisible, reducedMotion)}`}
         >
-          <span className="pr-[0.3em] text-right">For</span>
+          <span className="md:pr-[0.3em] md:text-right">For</span>
           <span
-            className={`text-left font-bold text-teal no-underline transition-opacity duration-400 ${tickerWordVisible ? "opacity-100" : "opacity-0"}`}
+            className={`min-w-30 text-center font-bold text-teal no-underline transition-opacity duration-400 md:min-w-0 md:text-left ${tickerWordVisible ? "opacity-100" : "opacity-0"}`}
           >
             {BUSINESS_TYPES[wordIndex]}
           </span>
