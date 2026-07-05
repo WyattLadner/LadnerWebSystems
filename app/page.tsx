@@ -5,10 +5,11 @@ import { TrustSection } from "@/components/trust-section"
 import { ProcessSection } from "@/components/process-section"
 import { PortfolioSection } from "@/components/portfolio-section"
 import { TestimonialSection } from "@/components/testimonial-section"
-import { ServiceAreaSection } from "@/components/service-area-section"
+import { StatsSection } from "@/components/stats-section"
 import { FreeAuditSection } from "@/components/free-audit-section"
 import { QuoteFormSection } from "@/components/quote-form-section"
 import { Footer } from "@/components/footer"
+import { ScrollReveal } from "@/components/scroll-reveal"
 
 export default function HomePage() {
   return (
@@ -21,11 +22,12 @@ export default function HomePage() {
         <ProcessSection />
         <PortfolioSection />
         <TestimonialSection />
-        <ServiceAreaSection />
+        <StatsSection />
         <FreeAuditSection />
         <QuoteFormSection />
       </main>
       <Footer />
+      <ScrollReveal />
     </div>
   )
 }

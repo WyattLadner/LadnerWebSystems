@@ -9,7 +9,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 80)
+      setIsScrolled(window.scrollY > 60)
     }
     handleScroll()
     window.addEventListener("scroll", handleScroll)
@@ -18,28 +18,28 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ease-in-out ${
+      className={`fixed top-0 z-50 w-full border-b transition-all duration-300 ${
         isScrolled
-          ? "border-b border-border/60 bg-background shadow-md"
-          : "border-b border-transparent bg-transparent shadow-none"
+          ? "border-faint bg-[rgba(10,10,10,0.92)] backdrop-blur-md"
+          : "border-transparent bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-16 w-full items-center justify-between px-0 sm:px-2 lg:px-4">
-        <div className="flex items-center gap-2">
-          <Image
-            src="/Ladner_Systems.png"
-            alt="Ladner Web Systems Logo"
-            width={240}
-            height={80}
-            className="h-45 w-auto sm:h-45"
-            priority
-          />
-        </div>
-        <div className="flex items-center gap-4">
-          <Button size="sm" asChild>
-            <a href="#contact">Get in Touch</a>
-          </Button>
-        </div>
+      <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <Image
+          src="/Ladner_Systems.png"
+          alt="Ladner Web Systems Logo"
+          width={140}
+          height={36}
+          className="h-9 w-auto"
+          priority
+        />
+        <Button
+          size="sm"
+          asChild
+          className="rounded-md bg-primary px-5 py-2 font-heading font-bold text-primary-foreground hover:bg-primary hover:opacity-90"
+        >
+          <a href="#contact">Get in Touch</a>
+        </Button>
       </div>
     </header>
   )

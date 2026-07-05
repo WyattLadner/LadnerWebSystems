@@ -95,23 +95,23 @@ export function QuoteFormSection() {
       id="contact"
       className="scroll-mt-24 bg-background px-4 py-16 sm:px-6 sm:py-24 lg:px-8"
     >
-      <div className="mx-auto mb-12 max-w-3xl text-center">
-        <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
-          Ready to get more customers from your website?
+      <div className="reveal mx-auto mb-12 max-w-3xl text-center">
+        <h2 className="font-heading text-[clamp(2rem,4vw,2.5rem)] font-extrabold text-foreground">
+          Ready to get more customers?
         </h2>
-        <p className="mt-4 text-lg text-muted-foreground">
+        <p className="mt-4 text-base text-muted-foreground">
           Fill out the form and we&apos;ll be in touch within 24 hours.
         </p>
-        <p className="mt-3 text-sm italic text-muted-foreground">
+        <p className="mt-3 text-[13px] italic text-muted-foreground">
           Most local business projects run between $1,500 and $4,000. Every project is scoped to what you actually need — no retainers, no surprise invoices.
         </p>
       </div>
 
-      <div className="mx-auto max-w-2xl rounded-xl border border-border/50 bg-card p-6 shadow-sm sm:p-8">
+      <div className="reveal mx-auto max-w-2xl rounded-xl border border-border bg-card p-6 sm:p-10">
         {isSuccess ? (
           <div className="py-12 text-center text-primary">
-            <h3 className="mb-2 text-2xl font-bold">Thank you!</h3>
-            <p className="text-foreground text-muted-foreground">
+            <h3 className="mb-2 font-heading text-2xl font-bold">Thank you!</h3>
+            <p className="text-muted-foreground">
               We&apos;ve received your request and will be in touch shortly.
             </p>
             <Button className="mt-6" onClick={() => setIsSuccess(false)}>
@@ -132,7 +132,7 @@ export function QuoteFormSection() {
                     <FormItem>
                       <FormLabel>Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="John Doe" {...field} />
+                        <Input className="bg-surface-2" placeholder="John Doe" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -146,7 +146,7 @@ export function QuoteFormSection() {
                     <FormItem>
                       <FormLabel>Business Name</FormLabel>
                       <FormControl>
-                        <Input placeholder="Acme Co." {...field} />
+                        <Input className="bg-surface-2" placeholder="Acme Co." {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -161,6 +161,7 @@ export function QuoteFormSection() {
                       <FormLabel>Email</FormLabel>
                       <FormControl>
                         <Input
+                          className="bg-surface-2"
                           placeholder="john@example.com"
                           type="email"
                           {...field}
@@ -179,6 +180,7 @@ export function QuoteFormSection() {
                       <FormLabel>Phone (optional)</FormLabel>
                       <FormControl>
                         <Input
+                          className="bg-surface-2"
                           placeholder="(555) 123-4567"
                           type="tel"
                           {...field}
@@ -202,7 +204,7 @@ export function QuoteFormSection() {
                         defaultValue={field.value}
                       >
                         <FormControl>
-                          <SelectTrigger>
+                          <SelectTrigger className="bg-surface-2">
                             <SelectValue placeholder="Select an option" />
                           </SelectTrigger>
                         </FormControl>
@@ -269,7 +271,7 @@ export function QuoteFormSection() {
                     <FormControl>
                       <Textarea
                         placeholder="Tell us a little more about what you need..."
-                        className="min-h-[120px]"
+                        className="min-h-30 bg-surface-2"
                         {...field}
                       />
                     </FormControl>
@@ -284,7 +286,11 @@ export function QuoteFormSection() {
                 </p>
               )}
 
-              <Button type="submit" className="w-full" disabled={isSubmitting}>
+              <Button
+                type="submit"
+                className="w-full rounded-md font-heading font-bold"
+                disabled={isSubmitting}
+              >
                 {isSubmitting ? "Sending..." : "Submit Request"}
               </Button>
             </form>

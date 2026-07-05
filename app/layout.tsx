@@ -1,10 +1,18 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Syne, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ['latin'] })
-const _geistMono = Geist_Mono({ subsets: ['latin'] })
+const syne = Syne({
+  subsets: ['latin'],
+  weight: ['400', '700', '800'],
+  variable: '--font-syne',
+})
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500'],
+  variable: '--font-inter',
+})
 
 export const metadata: Metadata = {
   title: 'Ladner Web Systems | Websites & Lead Capture Systems',
@@ -23,13 +31,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="font-sans antialiased relative min-h-screen">
-        <div className="fixed inset-0 -z-10 overflow-hidden bg-background pointer-events-none">
-          <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full bg-primary/20 blur-[120px] mix-blend-screen animate-orb-float" />
-          <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full bg-primary/10 blur-[150px] mix-blend-screen animate-orb-float-reverse" />
-        </div>
-
+    <html lang="en" className={`${syne.variable} ${inter.variable}`}>
+      <body className="font-sans antialiased relative min-h-screen bg-background">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

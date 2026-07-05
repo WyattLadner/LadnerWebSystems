@@ -45,23 +45,27 @@ export function ServicesSection() {
   return (
     <section className="relative px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
       <div className="mx-auto max-w-6xl relative z-10">
-        <h2 className="text-center text-2xl font-bold text-foreground sm:text-3xl">
+        <p className="reveal text-center text-xs font-medium uppercase tracking-[0.12em] text-teal">
+          What we build
+        </p>
+        <h2 className="reveal mt-3 text-center font-heading text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-foreground">
           Everything a local business needs to get found and get calls
         </h2>
-        <p className="mx-auto mt-3 max-w-2xl text-center text-muted-foreground">
+        <p className="reveal mx-auto mt-3 max-w-2xl text-center text-base text-muted-foreground">
           Built specifically for local service businesses, not corporate teams.
         </p>
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((service) => (
+          {services.map((service, index) => (
             <Card
               key={service.title}
-              className="group bg-card border border-border/40 transition-all hover:bg-card/80 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
+              style={{ transitionDelay: `${index * 0.1}s` }}
+              className="reveal group border border-faint bg-card transition-all hover:border-teal-border hover:shadow-[0_-2px_0_0_var(--teal),0_0_20px_var(--teal-dim)]"
             >
               <CardHeader className="pb-2">
-                <div className="mb-2 flex size-10 items-center justify-center rounded-lg bg-primary/10 transition-colors group-hover:bg-primary/20">
-                  <service.icon className="size-5 text-primary" />
-                </div>
-                <CardTitle className="text-lg">{service.title}</CardTitle>
+                <service.icon className="mb-2 size-5.5 text-teal" />
+                <CardTitle className="font-heading text-[17px] font-bold text-foreground">
+                  {service.title}
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm leading-relaxed text-muted-foreground">
