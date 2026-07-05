@@ -279,13 +279,15 @@ export function HeroSection() {
         </p>
 
         <div
-          className={`mx-auto my-4 flex w-full items-baseline justify-center gap-2 text-center text-[clamp(1.1rem,2.2vw,1.6rem)] text-muted-foreground md:grid md:grid-cols-2 md:gap-0 ${fadeClass(tickerVisible, reducedMotion)}`}
+          className={`my-4 flex w-full justify-center text-[clamp(1.1rem,2.2vw,1.6rem)] text-muted-foreground ${fadeClass(tickerVisible, reducedMotion)}`}
         >
-          <span className="md:pr-[0.3em] md:text-right">For</span>
-          <span
-            className={`min-w-30 text-center font-bold text-teal no-underline transition-opacity duration-400 md:min-w-0 md:text-left ${tickerWordVisible ? "opacity-100" : "opacity-0"}`}
-          >
-            {BUSINESS_TYPES[wordIndex]}
+          <span className="inline-flex items-center gap-[0.4rem]">
+            <span>For</span>
+            <span
+              className={`font-bold text-teal no-underline transition-opacity duration-400 ${tickerWordVisible ? "opacity-100" : "opacity-0"}`}
+            >
+              {BUSINESS_TYPES[wordIndex]}
+            </span>
           </span>
         </div>
 
