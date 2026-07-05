@@ -7,7 +7,7 @@ export function PortfolioSection() {
     <section id="work" className="scroll-mt-20 bg-background">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div
-          className="reveal-left relative min-h-125 bg-cover bg-top after:absolute after:inset-0 after:bg-linear-to-r after:from-transparent after:to-background"
+          className="reveal-left relative min-h-125 bg-cover bg-top after:absolute after:inset-0 after:bg-[linear-gradient(to_right,transparent_30%,rgba(10,10,10,0.4)_70%,var(--bg)_100%)]"
           style={{ backgroundImage: "url(/flatline_hero.png)" }}
         />
         <div className="reveal-right flex flex-col justify-center px-6 py-16 sm:px-12 sm:py-16 lg:p-16">

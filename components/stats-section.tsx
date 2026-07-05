@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 
 const stats = [
   { value: 7, prefix: "", label: "days from start to launch" },
-  { value: 0, prefix: "$", label: "templates used" },
+  { value: 0, prefix: "", label: "templates used" },
   { value: 1, prefix: "", label: "flat rate, no surprises" },
 ]
 

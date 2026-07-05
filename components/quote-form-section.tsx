@@ -102,9 +102,6 @@ export function QuoteFormSection() {
         <p className="mt-4 text-base text-muted-foreground">
           Fill out the form and we&apos;ll be in touch within 24 hours.
         </p>
-        <p className="mt-3 text-[13px] italic text-muted-foreground">
-          Most local business projects run between $1,500 and $4,000. Every project is scoped to what you actually need — no retainers, no surprise invoices.
-        </p>
       </div>
 
       <div className="reveal mx-auto max-w-2xl rounded-xl border border-border bg-card p-6 sm:p-10">

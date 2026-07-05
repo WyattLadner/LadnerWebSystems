@@ -24,13 +24,13 @@ export function Header() {
           : "border-transparent bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Image
           src="/Ladner_Systems.png"
           alt="Ladner Web Systems Logo"
-          width={140}
-          height={36}
-          className="h-9 w-auto"
+          width={187}
+          height={48}
+          className="h-12 w-auto"
           priority
         />
         <Button
