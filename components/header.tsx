@@ -30,7 +30,7 @@ export function Header() {
           alt="Ladner Web Systems Logo"
           width={187}
           height={48}
-          className="h-12 w-auto"
+          className="h-13 w-auto"
           priority
         />
         <Button

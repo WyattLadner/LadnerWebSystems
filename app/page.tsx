@@ -5,7 +5,6 @@ import { TrustSection } from "@/components/trust-section"
 import { ProcessSection } from "@/components/process-section"
 import { PortfolioSection } from "@/components/portfolio-section"
 import { TestimonialSection } from "@/components/testimonial-section"
-import { StatsSection } from "@/components/stats-section"
 import { FreeAuditSection } from "@/components/free-audit-section"
 import { QuoteFormSection } from "@/components/quote-form-section"
 import { Footer } from "@/components/footer"
@@ -22,7 +21,6 @@ export default function HomePage() {
         <ProcessSection />
         <PortfolioSection />
         <TestimonialSection />
-        <StatsSection />
         <FreeAuditSection />
         <QuoteFormSection />
       </main>

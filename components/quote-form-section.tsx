@@ -96,7 +96,7 @@ export function QuoteFormSection() {
       className="scroll-mt-24 bg-background px-4 py-16 sm:px-6 sm:py-24 lg:px-8"
     >
       <div className="reveal mx-auto mb-12 max-w-3xl text-center">
-        <h2 className="font-heading text-[clamp(2rem,4vw,2.5rem)] font-extrabold text-foreground">
+        <h2 className="pb-[0.2em] font-heading text-[clamp(2rem,4vw,2.5rem)] font-extrabold leading-tight text-foreground">
           Ready to get more customers?
         </h2>
         <p className="mt-4 text-base text-muted-foreground">

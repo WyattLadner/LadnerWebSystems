@@ -12,7 +12,7 @@ export function Footer() {
             alt="Ladner Web Systems Logo"
             width={156}
             height={40}
-            className="h-10 w-auto"
+            className="h-11 w-auto"
           />
           <p className="text-[13px] text-muted-foreground">
             Web systems for local businesses

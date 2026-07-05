@@ -69,14 +69,12 @@ function Stat({ stat }: { stat: (typeof stats)[number] }) {
   )
 }
 
-export function StatsSection() {
+export function StatsRow() {
   return (
-    <section className="bg-background px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
-      <div className="mx-auto grid max-w-4xl grid-cols-1 gap-12 sm:grid-cols-3">
-        {stats.map((stat) => (
-          <Stat key={stat.label} stat={stat} />
-        ))}
-      </div>
-    </section>
+    <div className="mx-auto grid max-w-6xl grid-cols-1 gap-12 sm:grid-cols-3">
+      {stats.map((stat) => (
+        <Stat key={stat.label} stat={stat} />
+      ))}
+    </div>
   )
 }

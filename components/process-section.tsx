@@ -1,3 +1,5 @@
+import { StatsRow } from "@/components/stats-section"
+
 const steps = [
   {
     number: "01",
@@ -52,6 +54,10 @@ export function ProcessSection() {
             </div>
           ))}
         </div>
+
+        <div className="mt-12 mb-10 border-t border-[rgba(0,180,216,0.15)]" />
+
+        <StatsRow />
       </div>
     </section>
   )

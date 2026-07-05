@@ -4,7 +4,7 @@ const tags = ["Website", "Booking System", "Mobile Optimized"]
 
 export function PortfolioSection() {
   return (
-    <section id="work" className="scroll-mt-20 bg-background">
+    <section id="work" className="mt-28 scroll-mt-20 bg-background">
       <div className="grid grid-cols-1 lg:grid-cols-2">
         <div
           className="reveal-left relative min-h-125 bg-cover bg-top after:absolute after:inset-0 after:bg-[linear-gradient(to_right,transparent_30%,rgba(10,10,10,0.4)_70%,var(--bg)_100%)]"

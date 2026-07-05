@@ -237,6 +237,15 @@ export function HeroSection() {
     >
       <canvas ref={canvasRef} className="absolute inset-0 z-0" />
 
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-125 w-200 -translate-x-1/2 -translate-y-1/2"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, rgba(0,180,216,0.06) 0%, transparent 70%)",
+        }}
+      />
+
       <div className="relative z-10 mx-auto max-w-3xl">
         <p
           className={`text-xs font-medium uppercase tracking-[0.12em] text-teal ${fadeClass(eyebrowVisible, reducedMotion)}`}
@@ -245,7 +254,7 @@ export function HeroSection() {
         </p>
 
         <h1 className="mt-6 font-heading text-[clamp(2.5rem,5vw,4.5rem)] leading-tight text-foreground">
-          <span ref={line1Ref} className="block font-normal">
+          <span ref={line1Ref} className="block pb-[0.2em] font-normal leading-tight">
             {renderWords(LINE_1_WORDS, 0, headlineReveal, reducedMotion)}
           </span>
           <span
@@ -255,7 +264,10 @@ export function HeroSection() {
                 : `transition-transform duration-500 ${EASE} ${dividerAnimate ? "scale-x-100" : "scale-x-0"}`
             }`}
           />
-          <span ref={line2Ref} className="block font-extrabold">
+          <span
+            ref={line2Ref}
+            className="block font-extrabold [text-shadow:0_0_80px_rgba(0,180,216,0.25),0_0_160px_rgba(0,180,216,0.1)]"
+          >
             {renderWords(LINE_2_WORDS, LINE_1_WORDS.length, headlineReveal, reducedMotion)}
           </span>
         </h1>
@@ -271,7 +283,7 @@ export function HeroSection() {
         >
           For{" "}
           <span
-            className={`inline-block min-w-45 text-center font-bold text-teal underline decoration-[rgba(0,180,216,0.4)] underline-offset-4 transition-opacity duration-400 ${tickerWordVisible ? "opacity-100" : "opacity-0"}`}
+            className={`inline-block min-w-50 text-left font-bold text-teal no-underline transition-opacity duration-400 ${tickerWordVisible ? "opacity-100" : "opacity-0"}`}
           >
             {BUSINESS_TYPES[wordIndex]}
           </span>
@@ -301,6 +313,15 @@ export function HeroSection() {
       >
         <ChevronDown className="size-6 animate-chevron-bob" />
       </a>
+
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 h-px"
+        style={{
+          background:
+            "linear-gradient(to right, transparent, rgba(0,180,216,0.4) 20%, rgba(0,180,216,0.4) 80%, transparent)",
+        }}
+      />
     </section>
   )
 }
